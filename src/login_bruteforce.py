@@ -1,10 +1,10 @@
 import requests
 from utils import load_wordlist, get_timestamped_filename
 
-def brute_force_login(url, username_file="resources/usernames.txt", password_file="resources/passwords.txt"):
+def brute_force_login(url, username_file="../resources/usernames.txt", password_file="../resources/passwords.txt"):
     usernames = load_wordlist(username_file)
     passwords = load_wordlist(password_file)
-    output_file = get_timestamped_filename("login_bruteforce_results")
+    output_file = get_timestamped_filename("../results/login_bruteforce_results")
 
     with open(output_file, "w") as log_file:
         print("[+] Starting brute-force login attempts...")

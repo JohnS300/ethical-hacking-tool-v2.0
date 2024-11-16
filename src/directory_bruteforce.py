@@ -2,9 +2,9 @@ import requests
 import threading
 from utils import load_wordlist, get_timestamped_filename
 
-def brute_force_directories(url, wordlist_file="resources/common.txt"):
+def brute_force_directories(url, wordlist_file="../resources/common.txt"):
     directories = load_wordlist(wordlist_file)
-    output_file = get_timestamped_filename("directory_bruteforce_results")
+    output_file = get_timestamped_filename("../results/directory_bruteforce_results")
     found_directories = []
 
     def request_directory(directory):
